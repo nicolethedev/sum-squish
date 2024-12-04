@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Unica One;
+    color: #fff;
+    font-size: 1.25rem;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #152D51;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
+/* #game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+  }
+  .tile {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    font-size: 24px;
+  } */
+  
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #263C5C;
+    width: 100%;
+    padding: 2rem 3rem;
+  }
