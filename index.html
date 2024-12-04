@@ -14,15 +14,30 @@
     <header> 
         <img src="logos/logo-light.png" alt="Sum Squish Logo" id="logo">
     </header>
-    <!-- <div id="game-container"></div> -->
-    <div class="game-over" id="game-over" style="visibility: hidden;">
+    <div class="launch-screen" id="launch-screen" style="display: none;">
+        <h1 class="instructions">How to play:</h1>
+        <li>Use arrow keys (or swipe if on a mobile device) to move tiles on the game board</li>
+        <img src="icons/arrow-keys.png" alt="Arrow Keys" id="arrow-keys">
+        <li>Squish the matching tiles to combine their sum</li>
+        <li>Be strategic with your swipes! One wrong move and it's game over</li>
+        <button id="start-button">Start Game</button>
+    </div>
+
+    <div class="game-screen" id="game-screen">
+        <container class="stats">
+            <h2 class="score">Score: <span id="score">0</span></h2>
+            <h2 class="moves">Moves: <span id="moves">0</span></h2>
+        </container>
+        
+    </div>
+
+    <div class="game-over" id="game-over" style="display: none;">
         <h1>Game Over</h1>
         <img src="icons/sad-ghost.png" alt="Sad Ghost" id="sad-ghost">
         <h2>Your score is: <span id="final-score">0</span></h2>
         <h2>Number of moves: <span id="moves-total">0</span></h2>
         <button id="restart-button">Play Again?</button>
     </div>
-
 
     <footer>
         <div class="left-footer">
@@ -34,5 +49,3 @@
     </footer>
 </body>
 </html>
-
-
