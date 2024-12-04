@@ -62,13 +62,18 @@
   }
 
   #restart-button {
-     font-family: Unica One;
+      font-family: Unica One;
       font-size: 1.5rem;
       padding: 1rem 2rem;
       border-radius: 15px;
       border: 4px solid #5396FA;
   }
 
+  #restart-button:hover {
+    background-color: #5396FA;
+    color: #fff;
+  }
+ 
   /* Footer Style -- Stays the same no matter what screen is displayed*/
 
   footer {
@@ -80,5 +85,5 @@
   }
 
   footer p {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
