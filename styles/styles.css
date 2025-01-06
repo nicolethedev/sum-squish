@@ -84,17 +84,22 @@ body {
     grid-template-rows: 1fr 1fr 1fr 1fr; 
     width: 400px; 
     height: 400px; 
-    background-color: rgb(209, 207, 207); 
+    background-color: #263C5C; 
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.753); 
     margin: 0 auto;
+    gap: 5px;
 } 
   
 .grid-item { 
-    border: 1px solid #5396FA; 
+    border: 3px solid #93B8DC;
+    border-radius: 10px;
     display: flex; 
     align-items: center; 
     justify-content: center; 
     font-size: 2rem; 
+    font-weight: 800;
+    box-sizing: border-box;
+    overflow: hidden;
 } 
 
 /* #game-container {

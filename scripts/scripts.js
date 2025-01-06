@@ -9,18 +9,22 @@ let matrix = [];
 let prevMatrix;
 
 let colors = [
-    "#caf0f8",
-    "#90e0ef",
-    "#00b4d8",
-    "#0077b6",
-    "#03045e",
-    "#023047",
-    "#fca311",
-    "#14213d",
-    "#e63946",
-    "#ffc300",
-    "#6a040f",
-    "#000000",
+    "#93B9DC", // empty square
+    "#386EBF", // number 2
+    "#1C4C95", // number 4
+    "#047284", // number 8
+    "#06A69E", // number 16
+    "#2E6BE7", // number 32
+    "#7D22E0", // number 64
+    "#AE04C1", // number 128
+    "#D21C88", // number 256
+    "#E92D63", // number 512
+    "#FD3B42", // number 1024
+    "#FF0005", // number 2048
+    "#FF6A00", // number 4096
+    "#FFBB00", // number 8192
+    "#09FF36", // number 16384
+    "#12F6F6", // number 32768
 ];
 
 // Create the starting game grid.
@@ -257,19 +261,52 @@ function updateColors() {
             let elem = matrix[i][j].firstElementChild;
             if (elem.innerText == 0) {
                 elem.parentElement.style.backgroundColor = colors[0];
-                elem.style.color = "black";
+                elem.style.color = "white";
             } else if (elem.innerText == 2) {
-                elem.style.color = "black";
+                elem.style.color = "white";
                 elem.parentElement.style.backgroundColor = colors[1];
             } else if (elem.innerText == 4) {
-                elem.style.color = "black";
+                elem.style.color = "white";
                 elem.parentElement.style.backgroundColor = colors[2];
             } else if (elem.innerText == 8) {
-                elem.style.color = "black";
+                elem.style.color = "white";
                 elem.parentElement.style.backgroundColor = colors[3];
-                        } else if (elem.innerText == 16) {
-                            elem.style.color = "white";
-                            elem.parentElement.style.backgroundColor = colors[4];
+            } else if (elem.innerText == 16) {
+                elem.style.color = "white";
+                elem.parentElement.style.backgroundColor = colors[4];
+            } else if (elem.innerText == 32) {
+                elem.style.color = "white";
+                elem.parentElement.style.backgroundColor = colors[5];
+            } else if (elem.innerText == 64) {
+                elem.style.color = "white";
+                elem.parentElement.style.backgroundColor = colors[6];
+            } else if (elem.innerText == 128) {
+                elem.style.color = "white";
+                elem.parentElement.style.backgroundColor = colors[7];
+            } else if (elem.innerText == 256) {
+                elem.style.color = "white";
+                elem.parentElement.style.backgroundColor = colors[8];
+            } else if (elem.innerText == 512) {
+                elem.style.color = "white";
+                elem.parentElement.style.backgroundColor = colors[9];
+            } else if (elem.innerText == 1024) {
+                elem.style.color = "white";
+                elem.parentElement.style.backgroundColor = colors[10];
+            } else if (elem.innerText == 2048) {
+                elem.style.color = "white";
+                elem.parentElement.style.backgroundColor = colors[11];
+            } else if (elem.innerText == 4096) {
+                elem.style.color = "white";
+                elem.parentElement.style.backgroundColor = colors[12];
+            } else if (elem.innerText == 8192) {
+                elem.style.color = "black";
+                elem.parentElement.style.backgroundColor = colors[13];
+            } else if (elem.innerText == 16384) {
+                elem.style.color = "black";
+                elem.parentElement.style.backgroundColor = colors[14];
+            } else if (elem.innerText == 32768) {
+                elem.style.color = "black";
+                elem.parentElement.style.backgroundColor = colors[15];
                         }
                     }
                 }
