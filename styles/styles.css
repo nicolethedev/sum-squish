@@ -78,6 +78,25 @@
     padding-right: 40%;
   }
 
+  .grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    width: 400px; 
+    height: 400px; 
+    background-color: rgb(209, 207, 207); 
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.753); 
+    margin: 0 auto;
+} 
+  
+.grid-item { 
+    border: 1px solid #5396FA; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 2rem; 
+} 
+
 /* #game-container {
     display: grid;
     grid-template-columns: repeat(4, 100px);
