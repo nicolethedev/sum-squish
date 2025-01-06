@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
   }
-  body {
+body {
     margin: 0;
     padding: 0;
     font-family: Unica One;
@@ -11,7 +11,7 @@
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: #152D51;
   }
 
@@ -157,6 +157,8 @@
     background-color: #263C5C;
     width: 100%;
     padding: 2rem 3rem;
+    bottom: 0;
+    position: absolute;
   }
 
   footer p {
