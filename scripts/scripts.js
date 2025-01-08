@@ -3,11 +3,13 @@ const score_val = document.querySelector("#score");
 const result = document.querySelector(".result");
 let score = 0;
 let moves = 0;
-let moveFactor = 4;
-let options = [2, 4, 8, 2, 4, 8, 2, 2, 4, 4, 2, 8, 2, 2, 4, 4, 2];
+// 1 new tile is generated for every 1 move
+let moveFactor = 1;
+let options = [2, 4, 2, 4, 2, 2, 4, 4, 2, 2, 2, 4, 4, 2];
 let matrix = [];
 let prevMatrix;
 
+// Specific colors for each number in the game
 let colors = [
     "#93B9DC", // empty square
     "#386EBF", // number 2
@@ -27,7 +29,7 @@ let colors = [
     "#12F6F6", // number 32768
 ];
 
-// Create the starting game grid.
+// Create the starting game grid
 let row = [];
 for (let index = 1; index < gridItems.length + 1; index++) {
     if (index % 4 === 0) {
@@ -64,7 +66,7 @@ updateColors();
 // Make web page able to listen to keydown event
 document.addEventListener("keydown", moveBlocks);
 
-// Method to extract columns from a 2D array.
+// columns for a 2D array
 const arrayColumn = (arr, n) => arr.map((x) => x[n]);
 
 function moveBlocks(e) {
@@ -122,7 +124,7 @@ function moveBlocks(e) {
     let check = checkMatrixEquality(prevMatrix, matrixVals);
 
     if (availIndexes.length === 0 && check === true) {
-        gameOver("loose");
+        gameOver("lose");
     }
 
     if (moves % moveFactor === 0) {
