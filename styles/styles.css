@@ -1,171 +1,177 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Unica One;
-    line-height: 1;
-    color: #fff;
-    font-size: 1.25rem;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: #152D51;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: Unica One;
+  line-height: 1;
+  color: #fff;
+  font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #152D51;
+}
 
-  h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-  }
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
 
-  h2 {
-    font-size: 2rem;
-  }
+h2 {
+  font-size: 2rem;
+}
 
-  li {
-    font-size: 1.6rem;
-    padding-bottom: .5rem;
-    padding-top: .5rem;
-  }
+li {
+  font-size: 1.6rem;
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+}
 
-  header {
-    display: flex;
-    justify-content: center;
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-  }
+header {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
 
-  /* Launch Screen */
+/* Launch Screen */
 
-  .launch-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 75vh;
-    margin-bottom: 3rem;
-  }
+.launch-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 75vh;
+  margin-bottom: 3rem;
+}
 
-  .launch-screen img {
-    padding: 2rem 0;
-  }
+.launch-screen img {
+  padding: 2rem 0;
+}
 
+#start-button {
+  font-family: Unica One;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  border: 4px solid #5396FA;
+  margin-top: 3rem;
+}
 
-  #start-button {
-    font-family: Unica One;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    border-radius: 15px;
-    border: 4px solid #5396FA;
-    margin-top: 3rem;
-  }
+#start-button:hover {
+  background-color: #5396FA;
+  color: #fff;
+}
 
-  #start-button:hover {
-    background-color: #5396FA;
-    color: #fff;
-  }
+/* Game Screen */
 
-  /* Game Screen */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40%;
+  padding-right: 40%;
+}
 
-  .stats {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 40%;
-    padding-right: 40%;
-  }
-
-  .grid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr; 
-    width: 400px; 
-    height: 400px; 
-    background-color: #263C5C; 
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.753); 
-    margin: 0 auto;
-    gap: 5px;
+.grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  width: 400px; 
+  height: 400px; 
+  background-color: #263C5C; 
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.753); 
+  margin: 0 auto;
+  gap: 5px;
 } 
-  
+
 .grid-item { 
-    border: 3px solid #93B8DC;
-    border-radius: 10px;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-size: 2rem; 
-    font-weight: 800;
-    box-sizing: border-box;
-    overflow: hidden;
-} 
+  border: 3px solid #93B8DC;
+  border-radius: 10px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 2rem; 
+  font-weight: 800;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
 
-/* #game-container {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
-    gap: 10px;
-  }
-  .tile {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eee;
-    font-size: 24px;
-  } */
-  
+/* Tile Animations */
+.tile {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
 
+.tile-2 { background-color: #386EBF; }
+.tile-4 { background-color: #1C4C95; }
+.tile-8 { background-color: #047284; }
+.tile-16 { background-color: #06A69E; }
+.tile-32 { background-color: #2E6BE7; }
+.tile-64 { background-color: #7D22E0; }
+.tile-128 { background-color: #AE04C1; }
+.tile-256 { background-color: #D21C88; }
+.tile-512 { background-color: #E92D63; }
+.tile-1024 { background-color: #FD3B42; }
+.tile-2048 { background-color: #FF0005; }
+.tile-4096 { background-color: #FF6A00; }
+.tile-8192 { background-color: #FFBB00; }
+.tile-16384 { background-color: #09FF36; }
+.tile-32768 { background-color: #12F6F6; }
+
+.grid-item .tile {
+  background-color: #93B9DC;
+  color: white;
+}
+
+.tile {
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.tile-scaled {
+  transform: scale(1.1);
+}
+
+.tile-merged {
+  transform: scale(1);
+}
 
 /* Game Over Screen */
+.game-over {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 75vh;
+  margin-bottom: 3rem;
+}
 
-  .game-over {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 75vh;
-    margin-bottom: 3rem;
-  }
+/* Footer Style -- Stays the same no matter what screen is displayed*/
 
-  /* .game-over h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-  }
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #263C5C;
+  width: 100%;
+  padding: 2rem 3rem;
+  bottom: 0;
+  position: absolute;
+}
 
-  .game-over h2 {
-    font-size: 2rem;
-  } */
-
-  #restart-button {
-      font-family: Unica One;
-      font-size: 1.5rem;
-      padding: 1rem 2rem;
-      border-radius: 15px;
-      border: 4px solid #5396FA;
-  }
-
-  #restart-button:hover {
-    background-color: #5396FA;
-    color: #fff;
-  }
- 
-  /* Footer Style -- Stays the same no matter what screen is displayed*/
-
-  footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #263C5C;
-    width: 100%;
-    padding: 2rem 3rem;
-    bottom: 0;
-    position: absolute;
-  }
-
-  footer p {
-    font-size: 1.25rem;
-  }
+footer p {
+  font-size: 1.25rem;
+}
