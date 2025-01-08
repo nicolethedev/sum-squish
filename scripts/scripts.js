@@ -195,7 +195,7 @@ function moveRight(row) {
             let newVal = val + nextVal;
             nextElement.innerText = newVal;
             currElement.innerText = "";
-            score = score + 2;
+            score = score + 1;
             score_val.innerText = score;
             if (newVal === 2048) {
                 gameOver("Win");
@@ -218,7 +218,7 @@ function moveLeft(row) {
             let newVal = val + prevVal;
             prevElement.innerText = newVal;
             currElement.innerText = "";
-            score = score + 2;
+            score = score * 2;
             score_val.innerText = score;
             if (newVal === 2048) {
                 gameOver("Win");
