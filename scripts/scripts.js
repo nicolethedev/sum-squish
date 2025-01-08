@@ -8,6 +8,8 @@ let moveFactor = 1;
 let options = [2, 4, 2, 4, 2, 2, 4, 4, 2, 2, 2, 4, 4, 2];
 let matrix = [];
 let prevMatrix;
+// For counting the number of arrow key presses
+let keyPressCount = 0;
 
 // Specific colors for each number in the game
 let colors = [
@@ -69,6 +71,7 @@ document.addEventListener("keydown", moveBlocks);
 // columns for a 2D array
 const arrayColumn = (arr, n) => arr.map((x) => x[n]);
 
+// Counting the key presses
 function moveBlocks(e) {
     if (
         e.key !== "ArrowLeft" &&
@@ -78,6 +81,10 @@ function moveBlocks(e) {
     ) {
         return;
     }
+
+    keyPressCount++;
+
+    document.querySelector("#moves").textContent = keyPressCount;
 
     moves++;
     matrixVals = getCurrentMatrixValues();
@@ -102,7 +109,6 @@ function moveBlocks(e) {
         moveRight(row1);
         moveRight(row2);
         moveRight(row3);
-        moveRight(row4);
     }
     if (e.key === "ArrowUp") {
         moveLeft(col1);
@@ -131,6 +137,7 @@ function moveBlocks(e) {
         generateNewBlock();
     }
 }
+
 
 function getCurrentMatrixValues() {
     let gridItems = [...document.querySelectorAll(".grid-item")];
